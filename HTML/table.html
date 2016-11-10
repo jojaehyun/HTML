@@ -5,7 +5,14 @@
   <title>테이블</title>
 </head>
 <body>
-  <table border="1" width="400">
+  <table border="1" width="500">
+    <caption>시간표</caption>
+    <colgroup>
+      <col width="150"/>
+      <col width="100"/>
+      <co lwidth="50"/>
+      <col width="100"/>
+    </colgroup>
 <thdad>
   <tr>
       <th>월</th>
@@ -21,16 +28,178 @@
       <td>합계</td>
       <td>100만원</td>
     </tfoot>
-
 <tbody>
     <tr>
-      <th>사과</th>
-      <th>배</th>
+      <td>사과</td>
+      <td>배</td>
+      <td>포도</td>
+      <td>오렌지</td>
+    </tr>
+    <tr>
+      <td>사과</td>
+      <td>배</td>
       <td>포도</td>
       <td>오렌지</td>
     </tr>
 </tbody>
 </table>
-  </tr>
+
+
+<!-- 세로형 테이블-->
+<table border="1" width="400">
+<tbody>
+      <tr>
+      <th>과일</th>
+      <td>배</td>
+      <td>오렌지</td>
+      <td>오렌지</td>
+    </tr>
+    <tr>
+      <th>과일</th>
+      <td>배</td>
+      <td>오렌지</td>
+      <td>오렌지</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <!-- 병합하는법-->
+  <table border="1" width="400">
+  <tr>
+    <td colspan="3">사과</td>
+    <td>배</td>
+    <td>포도</td>
+    <td>오렌지</td>
+    </tr>
+
+<!--위아래로 합치는것-->
+    <tr>
+      <td rowspan="3">사과</td>
+      <td>레몬</td>
+      <td>배</td>
+      <td>포도</td>
+      <td>오렌지</td>
+      </tr>
+</table>
+<!--읽는방향-->
+<table border="1" width="400">
+<thdad>
+  <tr>
+      <th scope="row">월</th>
+      <th>화</th>
+      <th>수</th>
+      <th>목</th>
+    </tr>
+  </thead>
+
+  <!-- 리딩방향 -->
+ <table border="1" width="400">
+   <thead>
+    <tr>
+<th scope="col">title</th>
+<th scope="col">title</th>
+ <th scope="col">title</th>
+<th scope="col">title</th>
+</tr>
+</thead>
+
+<!--테이블젠코딩방법-->
+<!-- table>(thead>tr*2>th{title}*6)(tbody>tr*6>td{title}*6) -->
+<table border="1" width="400">
+<thead>
+         <tr>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+         </tr>
+         <tr>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+           <th>title</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+         </tr>
+         <tr>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+         </tr>
+         <tr>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+          <td>title</td>
+         </tr>
+         <tr>
+          <td>title</td>
+           <td>title</td>
+          <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+         </tr>
+       <tr>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+        </tr>
+         <tr>
+          <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+           <td>title</td>
+         </tr>
+      </tbody>
+    </table>
+
+<!--복잡한테이블-->
+<!-- table>(thead>tr*2>th{title$}*6)+(tbody>tr*6>td{title$$}*6) -->
+
+   <table>
+    <table border="1" width="100%">
+      <caption>구조가 복잡한 테이블</caption>
+       <thead>
+         <tr>
+          <th>title</th>
+          <th>title</th>
+          <th>title</th>
+         <th>title</th>
+          <th>title</th>
+          <th>title</th>
+          <th>title1</th>
+         <th>title2</th>
+          <th>title3</th>
+          <th>title4</th>
+          <th>title5</th>
+          <th>title6</th>
+         </tr>
+       </thead>
+     </table>
+
+
 
 </html>
