@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style type="text/css">
+        :root{
+            background-color:#EEE;
+        }
+    
+        *{margin:0; padding:0;}
+        .box{
+            position:absolute; 
+            width:100px; 
+            height:100px; 
+            background-color:#FFF;
+            right:50%; 
+            margin-left:-250px;
+            right:60%;
+        }
+        
+        a{text-decoration: none;}
+        
+        .btn{
+            line-height:50px; 
+            color:#000;
+            padding:0 30px; 
+            
+     
+        }
+        
+        .box:target{
+             animation:openMotion 1s both cubic-bezier(0.75,-0.02, 0.22, 0.99);
+        }
+        .box:target{
+             animation:boxMotion 5s both cubic-bezier(0.75,-0.02, 0.22, 0.99);
+        }
+           .box:target{
+             animation:closeMotion 5s both cubic-bezier(0.75,-0.02, 0.22, 0.99);
+        }
+       
+        .close{
+            padding: 0 10px;
+            width:80px;
+            height:50px;
+            position:absolute;
+            right:-100px;
+            top:10px;
+             border-radius:0 10px 10px 0 ;
+        }
+        
+        
+        
+        
+        
+        @keyframes openMotion {
+            from { top:-60%; margin:0; left:50%;margin-left:-250px; }
+            to {top:50%;margin-top:-250px;}
+        }
+         @keyframes boxMotion {
+            from { top:-60%; margin:0; left:50%;margin-left:-250px; }
+            to {top:50%;margin-top:-250px;}
+        }
+        @keyframes closeMotion  {
+            from {top:50%;margin-top:-250px;}
+            to {top:-60%; margin:0; left:50%;margin-left:-250px;}
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <a href="#animation" id="aaa" class="btn">Open</a>
+    
+    <div class="box" id="animation">
+        <a href="#aaa" class="close">Close</a>
+    </div>
+    
+    
+</body>
+</html>
