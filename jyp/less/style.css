@@ -1,11 +1,11 @@
-html
+html,
 body {
-    height: 100%;
+  height: 100%;
 }
 body {
-    margin: 0;
-    background-image: url("http://missa.jype.com/images/bg-pc.jpg");
-    background-repeat:  no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    }
+  margin: 0;
+  background-image: url("http://wondergirls.jype.com/images/bg-pc.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
