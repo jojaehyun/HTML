@@ -1,30 +1,59 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>jyp</title>
-    <link rel="stylesheet" href="css/import.css" type="text/css" />
-</head>
-<body>
+  <meta charset="UTF-8">
+  <title>jyp</title>
+  <link rel="stylesheet" href="css/import.css" type="text/css" />
+  <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.menu').click(function(){
+      $(this).next('ul').slideToggle(1000);
+    })
+  })
+  </script>
+  <style type="text/css">
+  .flaticon-facebook-logo:before{
+    font-size:50px;}
+    </style>
 
+    <style type="text/css">
+    .flaticon-twitter-logo-silhouette:before{
+      font-size:50px;
+    }
+    </style>
+    <style type="text/css">
+    .flaticon-youtube-logo:before{
+      font-size:50px;}
+    </style>
+  </head>
+
+  <body>
     <header>
-        <h1><a href="index.html">원더걸스</a></h1>
-        <nav>
-          <a href=""class="meun"><Main Menu</a>
-
-          </main>
-            <ul>
-                <li><a href="#">PROFILE</a></li>
-                <li><a href="#">DISCOGRAPHY</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">VIDEO</a></li>
-                <li><a href="#">NOTICE</a></li>
-                <li><a href="#">SCHEDULE</a></li>
-            </ul>
-
-        </nav>
+      <h1><a href="index.html">원더걸스</a></h1>
+      <nav>
+        <a href="javascript:void(0);" class="menu">Main Menu</a>
+        <ul>
+          <li><a href="#">PROFILE</a></li>
+          <li><a href="#">DISCOGRAPHY</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">VIDEO</a></li>
+          <li><a href="#">NOTICE</a></li>
+          <li><a href="#">SCHEDULE</a></li>
+        </ul>
+      </nav>
     </header>
+    <section>
 
+      <div class="biglogo"></div>
+      <i class="flaticon-facebook-logo"></i>
+      <i class="flaticon-twitter-logo-silhouette"></i>
+      <i class="flaticon-youtube-logo"></i>
+      
+    </section>
 
-</body>
-</html>
+  </body>
+
+  </html>
