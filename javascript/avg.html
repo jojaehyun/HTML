@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript">
+
+
+  var nameArr = [];
+  var scoreArr = [];
+
+  var max_user = prompt('	학생의 수를 입력해주세요');
+  var check = confirm(max_user+"인원이 맞습니까?")
+
+  if(check){
+
+      for(var i=0;i<max_user;i++){
+          var name = prompt('이름을입력하세요');
+          var score = prompt('점수를입력하세요');
+          nameArr.unshift(name);
+          scoreArr.unshift(score);
+      }
+
+      document.write(nameArr + "<br />" +scoreArr)
+      var nexts = confirm('입력정보가 맞습니까?');
+
+      if(nexts){
+          console.log('반 전체 평균을 산출합니다.');
+          var score = 0;
+
+          for(var i = 0 in scoreArr){
+              score += Number(scoreArr[i]);
+
+          }
+
+
+
+
+         document.write('반전체 평균은 '+score/max_user+'입니다')
+
+          }
+
+
+          else if(!nexts){
+          alert('프로그램을 종료합니다')
+      }
+
+
+
+
+
+      console.log(nameArr,scoreArr)
+
+
+
+
+  }else if(!check){
+      console.log('re');
+  }
+
+
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>
