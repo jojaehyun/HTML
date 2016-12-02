@@ -1,0 +1,24 @@
+<script type="text/javascript">
+
+    var numberScope = 100; //정해진수
+    var randomNum = Math.random() * numberScope;
+    var ranNum = Math.floor(randomNum);
+    var count = prompt('count!!');
+
+
+    for(i=0; i < count;i++){
+
+        var entry = prompt('input in number');
+        if(ranNum > entry){// 그값이 크면
+            alert('Up!');
+        }else if(ranNum < entry){//그값이작으면
+            alert('Down!');
+        }else if(ranNum == entry){//그값이같으면
+            alert('oh!!!!');
+            break ;//끝내는거
+        }
+
+
+    }
+
+    </script>
