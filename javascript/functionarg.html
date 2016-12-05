@@ -78,14 +78,23 @@ var userCount = 5
 
        }
 //익명함수
-       console.log(a('하이'))
+        var a = function(x){
+                   return(x)
+                   console.log(a('하이'))
+}
+
+//콜백함수
+abc(function(){
+           return "하이" })
 
 
-               var a = function(x){
-                   console.log(x)
+       function abc(x){
+
+           console.log(x)
+       }
 
 
-               }
+
 
 
 
