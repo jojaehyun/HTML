@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+//리터럴함수=리턴함수=반환함수
+  function sum(x,y){
+return x+y
+  }
+
+  console.log(sum(sum(10,10),sum(20,sum(30,10))))//결과는 80
+
+//
+  var a = sum(10,20)
+
+             console.log("aaa"+a)
+
+         function sum(x,y){
+            return x+y
+         }
+         //aaa30
+
+         //
+         var a = sum(10,20)
+
+       console.log(a)
+
+       function current(){
+           return '원';
+       }
+
+
+       function sum(x,y){
+          return x+y+current();
+       }
+
+       //30
+
+     //
+       var a = current(10,10)
+     console.log(a)
+    function current(x,y){
+      return sum(x,y)+'원';
+     }
+
+     function sum(x,y){
+        return x+y
+     }
+
+      //20원
+
+      var userName = prompt('이름을 입력하세요')
+
+             console.log( userName+ "님 환영합니다.")
+             //이름을입력하는 창이나오고 000님 환영합니다 라고나옴
+
+var usercount = 5
+var userCu =user(usercount);
+console.log(user(userCu));
+function user(x){
+  return x + "명";
+}
+//5명
+
+var userCount = 5
+
+       var userCu = user(userCount);
+
+       user(10); user("x"); user("g");
+
+
+
+
+       function user(x){
+
+           return x + "명";
+
+       }
+//익명함수
+       console.log(a('하이'))
+
+
+               var a = function(x){
+                   console.log(x)
+
+
+               }
+
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
