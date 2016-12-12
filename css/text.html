@@ -1,37 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>text</title>
+   <style>
 
-<style>
+   .box{
+     width:400px;
 
-  .box{
-    width: 400px;
-    height: 400px;
-    font-weight: bold;
-    font-size: 12px;
-    /*font-style:italic;(기울임)*/
-    font-family: "돋움";
-    border:1px #F00 soild;}
+     font-weight: bold;
+     font-size:12px;
+     /*font-style: italic;*/
+     font-family: "돋움";
 
-.box div{color:red; font-family:"궁서"}
+     height:400px;
+     border:1px #F00 solid
+   }
 
-</style>
-</head>
-<body>
-<div class"box">
-  <span>돋움</span>
-  <p>굴림</p>
-  <div>
-    돋움
-    <p>굴림</p>
-  </div>
-</div>
-  
+   .box div{color:red; font-family: "궁서"}
+   .box div a{color:inherit;}
+   .box div p{color:inherit;}
+   .box{letter-spacing: 10px}/*자간*/
+   .box{letter-spacing: 10px word-spacing:10px}/*띄어쓰기*/
+   .box{letter-spacing: 10px word-spacing:10px work-break:keep-all; }/*단어별로 띄어줌*/
+   .box{letter-spacing: 0px line-height:5px }/*줄간격*/
+
+   </style>
+ </head>
+ <body>
+
+ <div class="box">
+   <span>시간적인 간격과 공간적인 거리는 서로 분리할 수 없고 시공간적 거리라는 하나의 양으로서만 측정할 수 있다.
+ 시간을 제외하고 공간만을 생각한 거리는 아래 기하학적 거리 부분에 나와 있는 식으로 계산할 수 있으며 이러한 거리는 어떤 물체가 한 곳에서 다른 곳으로 갈 때의 속도와 걸린 시간을 곱한 것(속도가 시간에 따라 달라질 경우 속도를 시간에 대해 적분한 것)과 같다. </span>
+   <p>굴림</p>
+   <div>
+       <a href="">돋움</a>
+       <p>굴림</p>
+   </div>
+ </div>
 
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+ </body>
+ </html>
