@@ -7,16 +7,34 @@
     <script>
 
         $(function(){
+
             $('.open').click(function(){
-                $('.pop').fadeIn();
-                bl()
-
-            });
-
-            $('.close').click(function(){
-                $('.pop').fadeOut();
-                $('.bl').remove()
+                bl();
+                var tg = '.'+$(this).attr('id');
+                var w = $(tg).width();
+                var h = $(tg).height();
+                $(tg).show().css({
+                    left:'50%',
+                    top:function(){
+                        return $(window).scrollTop() + 'px'
+                    },
+                    marginLeft:function(){
+                        return '_'+(w / 2)+"px"
+                    }
+                });
             })
+
+            var close = function(){
+
+                $('.pop').hide();
+                $('.bl').fadeOut(function(){
+               $(this).remove();
+            })
+
+            }
+
+            $('body').on('click','.b1',close);
+            $('.close').click(close);
 
           function bl(){
             $('body').prepend('<div class="bl"></div>');
@@ -44,17 +62,19 @@
                     margin:50px auto;
                     background-color:#fff;
                 }
+                button.open{margin-top:500px;}
                 .pop{
                     border:1px #F00 solid;
-                    width: 400px;
-                    height:350px;
                     position:absolute;
-                    top:0;
-                    left:50%;
-                    margin-left:-200px;
                     background-color: #FFF;
                     display:none;
                 }
+
+
+                .popup1{width:200px; height:300px;}
+                .popup2{width:300px; height:200px;}
+                .popup3{width:500px; height:500px;}
+
                 .bl{
                     position:fixed;
                     width:100%;
@@ -68,11 +88,24 @@
                 </head>
                 <body>
                     <div class="wrap">
-                        <button class="open">팝업나와!</button>
+                        <button class="open" id="popup1">팝업나와1</button>
+                        <button class="open" id="popup2">팝업나와2</button>
+                        <button class="open" id="popup3">팝업나와3</button>
+
                     </div>
 
-                    <div class="pop">
+
+                    <div class="pop popup1">
                         <button class="close">닫기</button>
+                        <h1>팝업1</h1>
+                        </div>
+                        <div class="pop popup2">
+                        <button class="close">닫기</button>
+                        <h1>팝업2</h1>
+                        </div>
+                       <div class="pop popup3">
+                        <button class="close">닫기</button>
+                        <h1>팝업3</h1>
                         </div>
                 </body>
 </html>
